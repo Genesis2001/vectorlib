@@ -27,20 +27,19 @@
 		[Test]
 		public void Operator_VectorTimesVector_ShouldReturnTheDotProductOfBothVectors()
 		{
-			var vector = new Vector3(3, 7, -2);
+			var vector  = new Vector3(3, 7, -2);
+			var actual  = SUT * vector;
 
-			var value  = SUT * vector;
-
-			Assert.That(value, Is.EqualTo(30));
+			Assert.That(actual, Is.EqualTo(30));
 		}
 
 		[Test]
 		public void Operator_VectorTimesScalar_ShouldReturnVector3MultipliedByScalar()
 		{
-			var expected = new Vector3(10, 20, 10);
-			var value    = SUT * 5;
+			var expected  = new Vector3(10, 20, 10);
+			var actual    = SUT * 5;
 
-			Assert.That(value, Is.EqualTo(expected));
+			Assert.That(actual, Is.EqualTo(expected));
 		}
 
 		[Test]
@@ -64,11 +63,11 @@
 		[Test]
 		public void Vector3Cross_ShouldBeImplementedProperly()
 		{
-			var expected = new Vector3(-22, 10, 2);
-			var vector   = new Vector3(3, 7, -2);
-			var value    = Vector3.Cross(SUT, vector);
+			var expected  = new Vector3(-22, 10, 2);
+			var vector    = new Vector3(3, 7, -2);
+			var actual    = Vector3.Cross(SUT, vector);
 
-			Assert.That(value, Is.EqualTo(expected));
+			Assert.That(actual, Is.EqualTo(expected));
 		}
 	}
 
